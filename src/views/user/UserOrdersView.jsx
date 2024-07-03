@@ -71,7 +71,8 @@ export default function UserOrdersView() {
       }
       const orders = await response.json();
       const data = orders.map((order) => {
-        const orderDetailNames = order.orderDetails
+        const orderDetails = [...order.orderDetails];
+        const orderDetailNames = orderDetails
           .splice(0, 3)
           .map((orderDetail) => orderDetail.product.name);
 
