@@ -7,8 +7,8 @@ export default function ProductsFilteredView() {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("query");
   const orderByParam = searchParams.get("orderBy");
-  const [products, setProducts] = useState([]);
   const [orderBy, setOrderBy] = useState("");
+  const [products, setProducts] = useState([]);
 
   async function fetchProductsByQueryAndOrderBy() {
     try {

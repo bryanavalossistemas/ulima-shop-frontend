@@ -9,9 +9,10 @@ import { useStore } from "@/store";
 export default function LoginView() {
   const [searchParams, setSearchParams] = useSearchParams();
   const redirectTo = searchParams.get("redirectTo");
+  const setAuthToken = useStore((state) => state.setAuthToken);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const setAuthToken = useStore((state) => state.setAuthToken);
   const [submiting, setSubmiting] = useState(false);
 
   const navigate = useNavigate();
