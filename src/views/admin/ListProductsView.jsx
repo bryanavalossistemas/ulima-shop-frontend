@@ -174,6 +174,7 @@ export default function ListProductsView() {
       const filteredProducts = products.map((product) => {
         return {
           ...product,
+          categoryName: product.productCategory.name,
           createdAt: new Date(product.createdAt).toLocaleDateString(),
           active: product.active ? "Activo" : "Inactivo",
         };
