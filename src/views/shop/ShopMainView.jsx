@@ -53,7 +53,7 @@ export default function ShopMainView() {
           />
           <Link className="h-full " to={`/products?query=${query}`}>
             <Button className="h-full px-14 rounded-none text-lg" type="button">
-              Buscar
+              Buscar cambiado
             </Button>
           </Link>
         </div>
